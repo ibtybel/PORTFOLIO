@@ -1,4 +1,3 @@
-// home_page_cv_based.tsx
 import React from 'react';
 import {
   Container,
@@ -12,6 +11,9 @@ import {
 } from '@mui/material';
 import { Email, LocationOn, Phone } from '@mui/icons-material';
 import { keyframes } from '@emotion/react';
+
+// ✅ IMPORT YOUR IMAGE CORRECTLY
+import profileImg from "../data/pic.png";
 
 // Animated gradient using background-position shift
 const gradientShift = keyframes`
@@ -64,10 +66,10 @@ export default function Home() {
               gap: 2,
             }}
           >
-            {/* ⭐ NEW: Real Picture Placeholder ⭐ */}
+            {/* ⭐ FIXED WORKING IMAGE ⭐ */}
             <Avatar
-              src="/assets/profile.jpg"        // <-- Place your picture here
-              alt="Profile Picture"
+              src={profileImg}
+              alt="profile"
               sx={{
                 width: 170,
                 height: 170,
@@ -127,7 +129,14 @@ export default function Home() {
               👋 About Me
             </Typography>
             <Typography variant="body1" lineHeight={1.8}>
-              I am a proactive and adaptable front-end developer with experience in creating user-friendly interfaces and solving technical problems. I am skilled in React and Material-UI and have experience with Docker. I am comfortable working with both Windows and Linux systems and have a solid foundation in development and IT support. I am also experienced with incident management tools such as Jira and ServiceNow. Whether I'm designing sleek, intuitive interfaces or troubleshooting complex issues, I prioritise clarity, efficiency and creating delightful user experiences that truly resonate.
+              I am a proactive and adaptable front-end developer with experience in creating
+              user-friendly interfaces and solving technical problems. I am skilled in React
+              and Material-UI and have experience with Docker. I am comfortable working with
+              both Windows and Linux systems and have a solid foundation in development and IT
+              support. I am also experienced with incident management tools such as Jira and
+              ServiceNow. Whether I'm designing sleek, intuitive interfaces or troubleshooting
+              complex issues, I prioritise clarity, efficiency and creating delightful user
+              experiences that truly resonate.
             </Typography>
           </Paper>
 
